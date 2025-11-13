@@ -1,0 +1,107 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #FAFAFA, #f0f0f0);
+  color: #2C2C2C;
+}
+
+header {
+  background: #1A1A1A;
+  color: #FAFAFA;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.review-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.review-section h2 {
+  color: #C8A951;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 25px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #C8A951, #EFB8C0);
+  color: #1A1A1A;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+.star-rating {
+  margin-bottom: 15px;
+}
+
+.star-rating span {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star-rating span.hover,
+.star-rating span.selected {
+  color: #C8A951;
+}
+
+.reviews-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.review-card {
+  background: #1A1A1A;
+  color: #FAFAFA;
+  padding: 20px;
+  border-radius: 15px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.review-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.review-card h4 {
+  color: #EFB8C0;
+  margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+  .reviews-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .reviews-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
