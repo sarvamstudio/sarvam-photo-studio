@@ -27,7 +27,8 @@ header {
   margin-bottom: 25px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -53,15 +54,15 @@ form button:hover {
 
 .star-rating {
   margin-bottom: 15px;
+  direction: rtl;
 }
-
 .star-rating span {
+  direction: ltr;
   font-size: 2rem;
   cursor: pointer;
   color: #ccc;
   transition: color 0.2s;
 }
-
 .star-rating span.hover,
 .star-rating span.selected {
   color: #C8A951;
@@ -103,5 +104,14 @@ form button:hover {
 @media (min-width: 900px) {
   .reviews-container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+  .star-rating span {
+    font-size: 1.8rem;
   }
 }
