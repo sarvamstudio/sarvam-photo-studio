@@ -53,27 +53,23 @@ form button:hover {
 }
 
 .star-rating {
-  margin-bottom: 15px;
-  direction: rtl;
-}
-.star-rating span {
-  direction: ltr;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #ccc;
-  transition: color 0.2s;
-}
-.star-rating span.hover,
-.star-rating span.selected {
-  color: #C8A951;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
 }
 
-.reviews-container {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.star-rating span {
+    font-size: 25px;
+    color: #ccc;
+    transition: 0.2s;
 }
+
+.star-rating span.selected,
+.star-rating span.hover {
+    color: gold;
+}
+
 
 .review-card {
   background: #1A1A1A;
@@ -127,4 +123,5 @@ form button:hover {
     font-size: 1.8rem;
   }
 }
+
 
