@@ -95,6 +95,18 @@ form button:hover {
   margin-top: 10px;
 }
 
+.logo {
+    width: 180px;
+    max-width: 80%;
+    height: auto;
+}
+.logo-container {
+    text-align: center;
+    padding: 20px 0;
+    background: #000;
+}
+
+
 @media (min-width: 600px) {
   .reviews-container {
     grid-template-columns: 1fr 1fr;
@@ -115,3 +127,4 @@ form button:hover {
     font-size: 1.8rem;
   }
 }
+
