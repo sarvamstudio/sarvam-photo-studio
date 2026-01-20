@@ -4,12 +4,12 @@ const stars = document.querySelectorAll('.star-rating span');
 
 let selectedRating = 5;
 
-// STAR EFFECTS
-stars.forEach(star => {
+/* STAR INTERACTION */
+stars.forEach((star, index) => {
 
   star.addEventListener('mouseover', () => {
     stars.forEach(s => s.classList.remove('hover'));
-    for (let i = 0; i < star.dataset.value; i++) {
+    for (let i = 0; i <= index; i++) {
       stars[i].classList.add('hover');
     }
   });
@@ -22,31 +22,30 @@ stars.forEach(star => {
   });
 
   star.addEventListener('click', () => {
-    selectedRating = star.dataset.value;
+    selectedRating = index + 1;
     stars.forEach(s => s.classList.remove('selected'));
-
     for (let i = 0; i < selectedRating; i++) {
       stars[i].classList.add('selected');
     }
   });
 });
 
-// SUBMIT REVIEW
-reviewForm.addEventListener('submit', function (e) {
+/* SUBMIT REVIEW */
+reviewForm.addEventListener('submit', e => {
   e.preventDefault();
 
   const name = document.getElementById('name').value;
-  const mobile = document.getElementById('mobile').value;   // saved privately
+  const mobile = document.getElementById('mobile').value;
   const reviewText = document.getElementById('reviewText').value;
 
   db.collection("reviews").add({
-    name: name,
-    mobile: mobile, // saved to database but not shown
+    name,
+    mobile,
     text: reviewText,
     rating: selectedRating,
     date: new Date()
   }).then(() => {
-    alert("Thank you! Your review has been submitted.");
+    alert("🙏 Thank you for your review!");
     reviewForm.reset();
 
     selectedRating = 5;
@@ -55,7 +54,7 @@ reviewForm.addEventListener('submit', function (e) {
   });
 });
 
-// LOAD ALL REVIEWS
+/* LOAD REVIEWS */
 db.collection("reviews")
   .orderBy("date", "desc")
   .onSnapshot(snapshot => {
@@ -63,17 +62,25 @@ db.collection("reviews")
 
     snapshot.forEach(doc => {
       const r = doc.data();
-
       const card = document.createElement('div');
-      card.classList.add('review-card');
+      card.className = 'review-card';
 
       card.innerHTML = `
         <p>${r.text}</p>
-        <p class="stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</p>
-        <h4>- ${r.name}</h4>
+        <div class="stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+        <h4>— ${r.name}</h4>
       `;
 
       reviewsContainer.appendChild(card);
-      setTimeout(() => card.classList.add('show'), 50);
+      setTimeout(() => card.classList.add('show'), 100);
     });
   });
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+
+console.log("Premium Review Page Loaded");
