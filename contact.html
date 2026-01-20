@@ -3,34 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us | Sarvam Digital Studio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="contact.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
-<nav class="navbar">
-  <div class="nav-logo">
-    <img src="sarvam-logo.jpeg" alt="Sarvam Studio">
+
+  <nav class="navbar">
+  <div class="navbar-inner">
+
+    <div class="nav-logo">
+      <img src="sarvam-logo.jpeg" alt="Sarvam Studio">
+      <span>SARVAM STUDIO</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
   </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
 </nav>
-  
+
 <section class="contact-hero">
   <h1>Contact Sarvam Digital Studio</h1>
-  <p>Let’s capture your beautiful moments 📸</p>
+  <p>Photography | Videography | Passport | Events 📸</p>
 </section>
 
 <section class="contact-container">
 
+  <!-- LEFT INFO -->
   <div class="contact-info">
+
     <div class="info-box">
       <h3>📞 Call Us</h3>
-      <p>+91 99254 17991</p>
+      <p><a href="tel:+919925417991">+91 99254 17991</a></p>
     </div>
 
     <div class="info-box">
@@ -39,31 +52,57 @@
     </div>
 
     <div class="info-box">
-      <h3>📍 Address</h3>
-      <p>Ambika Nagar Society, Plot No: 15, Society Road, behind Harinagar-2, Ambika Nagar, Harinagar-2, Madhav Nagar, Udhana, Surat, Gujarat 394210</p>
+      <h3>⏰ Business Hours</h3>
+      <p>Mon – Sun : 9:00 AM – 8:00 PM</p>
     </div>
 
-    <a class="whatsapp-btn" href="https://wa.me/919925417991" target="_blank">
-      💬 Chat on WhatsApp
-    </a>
+    <div class="info-box">
+      <h3>📍 Studio Address</h3>
+      <p>
+        Ambika Nagar Society, Plot No 15,<br>
+        Udhana, Surat – 394210
+      </p>
+    </div>
+
+    <div class="quick-buttons">
+      <a href="https://wa.me/919925417991" target="_blank" class="whatsapp-btn">💬 WhatsApp</a>
+      <a href="tel:+919925417991" class="call-btn">📞 Call Now</a>
+    </div>
+
   </div>
 
+  <!-- RIGHT FORM -->
   <div class="contact-form">
-    <h2>Send Us a Message</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Phone Number" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h2>Send Enquiry</h2>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Mobile Number" required>
+
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option>Wedding Photography</option>
+        <option>Baby Photography</option>
+        <option>Passport Photos</option>
+        <option>Event Coverage</option>
+        <option>Video Shooting</option>
+      </select>
+
+      <textarea id="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send on WhatsApp</button>
     </form>
   </div>
 
 </section>
 
 <section class="map-section">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.803994875644!2d72.8381203!3d21.1601972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e21a5efe007%3A0x23fc644d0add1905!2sSarvam%20Digital%20Studio!5e0!3m2!1sen!2sin!4v1767104344879!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe 
+    src="https://www.google.com/maps?q=Sarvam%20Digital%20Studio%20Surat&output=embed"
+    loading="lazy">
+  </iframe>
 </section>
 
+<script src="contact.js"></script>
 </body>
 </html>
