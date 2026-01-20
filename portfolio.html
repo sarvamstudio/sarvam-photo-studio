@@ -1,30 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Portfolio | Sarvam Studio</title>
+
+<!-- IMPORTANT FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="portfolio.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<nav class="navbar">
-  <div class="nav-logo">
-    <img src="sarvam-logo.jpeg" alt="Sarvam Studio">
+
+  <nav class="navbar">
+  <div class="navbar-inner">
+
+    <div class="nav-logo">
+      <img src="sarvam-logo.jpeg" alt="Sarvam Studio">
+      <span>SARVAM STUDIO</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
   </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
 </nav>
 
-<h1>Our Photography Work</h1>
+<header class="portfolio-header">
+  <h1>Our Photography Work</h1>
+  <p>Moments captured with love & perfection</p>
+</header>
 
+<!-- FILTER BUTTONS -->
+<div class="filter-buttons">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="wedding">Wedding</button>
+  <button data-filter="baby">Baby</button>
+  <button data-filter="portrait">Portrait</button>
+</div>
+
+<!-- GALLERY -->
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+  <div class="gallery-item wedding">
+    <img src="images/wedding/2.jpg">
+  </div>
+
+  <div class="gallery-item portrait">
+    <img src="images/pre-wedding/1.jpg">
+  </div>
+
+  <div class="gallery-item wedding">
+    <img src="images/wedding/1.jpg">
+  </div>
+
+  <div class="gallery-item baby">
+    <img src="images/baby/1.jpg">
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
 </div>
 
 <script src="portfolio.js"></script>
