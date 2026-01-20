@@ -1,51 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 <title>Services | Sarvam Studio</title>
 <link rel="stylesheet" href="services.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-logo">
-    <img src="sarvam-logo.jpeg" alt="Sarvam Studio">
+  <nav class="navbar">
+  <div class="navbar-inner">
+
+    <div class="nav-logo">
+      <img src="sarvam-logo.jpeg" alt="Sarvam Studio">
+      <span>SARVAM STUDIO</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
   </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
 </nav>
 
-
-<h1>Our Services</h1>
+<h1 class="page-title">Our Services</h1>
 
 <section class="services-section">
 
-  <div class="service-card">
-    <img src="images/wedding.jpg" alt="Wedding Photography">
-    <h3>Wedding Photography</h3>
-    <p>Beautiful wedding memories captured forever.</p>
+  <div class="service-card" onclick="openGallery('baby')">
+    <img src="images/baby/1.jpg">
+    <div class="service-content">
+      <h3>Baby Photography</h3>
+      <p>Cute & creative baby photoshoots</p>
+    </div>
   </div>
 
-  <div class="service-card">
-    <img src="images/baby.jpg" alt="Baby Photography">
-    <h3>Baby Photography</h3>
-    <p>Cute & creative baby photoshoots.</p>
+  <div class="service-card" onclick="openGallery('wedding')">
+    <img src="images/wedding/1.jpg">
+    <div class="service-content">
+      <h3>Wedding Photography</h3>
+      <p>Beautiful wedding memories forever</p>
+    </div>
   </div>
 
-  <div class="service-card">
-    <img src="images/passport.jpg" alt="Passport Photos">
-    <h3>Passport Photos</h3>
-    <p>Govt approved passport & visa photos – instant.</p>
+  <div class="service-card" onclick="openGallery('pre-wedding')">
+    <img src="images/pre-wedding/1.jpg">
+    <div class="service-content">
+      <h3>Pre-Wedding</h3>
+      <p>Outdoor Pre-Wedding Photos for Wedding time</p>
+    </div>
   </div>
 
-  <div class="service-card">
-    <img src="images/event.jpg" alt="Event Coverage">
-    <h3>Event Coverage</h3>
-    <p>Birthday, engagement & all events covered.</p>
+  <div class="service-card" onclick="openGallery('event')">
+    <img src="images/event/1.jpg">
+    <div class="service-content">
+      <h3>Event Coverage</h3>
+      <p>All events professionally covered</p>
+    </div>
   </div>
 
 </section>
